@@ -5,6 +5,7 @@ import {Typography,styled,Box} from '@mui/material'
 // componenents
 import Balance from './components/Balance';
 import ExpenseCard from './components/ExpenseCard';
+import NewTransction from './components/NewTransction';
 
 const Header =styled(Typography)`
   margin:10px 0;
@@ -21,6 +22,7 @@ function App() {
         <Box>
           <Balance/>
           <ExpenseCard/>
+          <NewTransction/>
         </Box>
         <Box></Box>
      </Box>

@@ -1,16 +1,30 @@
 import React from 'react'
 
-import {Box,Card,CardContent, Typography} from '@mui/material'
+import {Box,Card,CardContent, Typography,styled} from '@mui/material'
+
+const Container =styled(Box)`
+display:flex;
+& > div{
+    flex:1;
+    padding:10px;
+}
+`
 function ExpenseCard() {
   return (
-    <Box>
+    <Container>
         <Card>
             <CardContent>
                 <Typography> Income</Typography>
-                <Typography>2500</Typography>
+                <Typography style={{color:'green'}}>2500</Typography>
             </CardContent>
         </Card>
-    </Box>
+        <Card>
+            <CardContent>
+                <Typography>Expense</Typography>
+                <Typography style={{color:'red'}}>1500</Typography>
+            </CardContent>
+        </Card>
+    </Container>
   )
 }
 
