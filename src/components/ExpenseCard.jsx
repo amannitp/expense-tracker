@@ -9,19 +9,22 @@ display:flex;
     padding:10px;
 }
 `
-function ExpenseCard() {
+function ExpenseCard({transtions}) {
+    const amount=transtions.map(transtion => transtion.Amount);
+    const income= amount.filter(item => item>0).reduce((acc,item)=>(acc+=item),0).toFixed(2);
+    const expense= (amount.filter(item => item<0).reduce((acc,item)=>(acc+=item),0)*-1).toFixed(2);
   return (
     <Container>
         <Card>
             <CardContent>
                 <Typography> Income</Typography>
-                <Typography style={{color:'green'}}>2500</Typography>
+                <Typography style={{color:'green'}}>₹{income}</Typography>
             </CardContent>
         </Card>
         <Card>
             <CardContent>
                 <Typography>Expense</Typography>
-                <Typography style={{color:'red'}}>1500</Typography>
+                <Typography style={{color:'red'}}>₹{expense}</Typography>
             </CardContent>
         </Card>
     </Container>
