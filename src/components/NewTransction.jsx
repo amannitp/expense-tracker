@@ -9,7 +9,6 @@ flex-direction:column;
 & > h5,& >div ,& >button{
     margin-top:20px;
 }
-
 `
 function NewTransction({setTranstion}) {
     const [text,setText]=useState('')
