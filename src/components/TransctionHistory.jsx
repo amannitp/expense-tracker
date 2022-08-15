@@ -11,7 +11,7 @@ function TransctionHistory({transtion,setTranstion,transtions}) {
     const color=transtion.Amount>0 ? 'Green': 'Red'
 
     const deleteTransction=(id)=>{
-        setTranstion(transtions.filter(transtion => transtion.id !==id))
+        setTranstion(transtions.filter(transtion => transtion.id!==id))
 
     }
   return (
