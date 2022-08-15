@@ -11,13 +11,14 @@ function TransctionHistory({transtion,setTranstion,transtions}) {
     const color=transtion.Amount>0 ? 'Green': 'Red'
 
     const deleteTransction=(id)=>{
-        setTranstion(transtions.filter(transtion => transtion.id!==id))
+      debugger
+        setTranstion(transtions.filter(transtion => transtion.id==id))
 
     }
   return (
     <Detail style={{background:`${color}`,color:"white"}}>
         <ListItemIcon>
-            <DeleteIcon onclick={()=>deleteTransction(transtion.id)}/>
+            <DeleteIcon onClick={()=>deleteTransction(transtion.id)}/>
         </ListItemIcon>
         <ListItemText>{transtion.text}</ListItemText>
         <ListItemText>{transtion.Amount}</ListItemText>
